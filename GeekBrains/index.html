@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h4>Почему код даёт именно такие результаты?</h4>
+    <p>var a = 1, b = 1, c, d;</p>
+    <p>c = ++a; alert(c);           // 2 <font color = "green"> a = 1 -> a = a + 1; c = a</font></p>
+    <p>d = b++; alert(d);           // 1 <font color = "green"> b = 1 -> d = b; b = b + 1</font></p>
+    <p>c = (2+ ++a); alert(c);      // 5 <font color = "green"> a = 2 -> a = a + 1; c = 2 + a</font></p>
+    <p>d = (2+ b++); alert(d);      // 4 <font color = "green"> b = 2 -> d = 2 + b; b = b + 1</font></p>
+    <p>alert(a);                    // 3 <font color = "green"> ++a, ++a </font></p>
+    <p>alert(b);                    // 3 <font color = "green"> b++ b++</font></p>
+
+    <script src="1.js"></script>
+    <h4>Чему будет равен x в примере ниже?</h4>
+    <p>var a = 2;</p>
+    <p>var x = 1 + (a *= 2);</p>
+    <script src="2.js"></script>
+    <p>a = a * 2; x = 1 + a -> 5</p>
+
+
+    <h4>Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:</h4>
+    <script src="3.js"></script>
+
+    <h4>Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15</h4>
+    <script src="4.js"></script>
+
+    <h4> Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор</h4>
+    <script src="5.js"></script>
+
+    <h4>Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение (использовать switch)</h4>
+
+    <script src="6.js"></script>
+
+    <h4>Сравнить null и 0. Попробуйте объяснить результат.</h4>
+    <p><font color = "green">null == 0 - false</font>></p>
+    <p><font color = "green">null > 0 - false</font>></p>
+    <p><font color = "green">null < 0 - false</font>></p>
+    <p><font color = "green">null != 0 - True</font>></p>
+    <p><font color = "green">null - это пустое значение, поэтому оно не может быть не меньше, ни больше ,ни равно какому либо числу</font>></p>
+
+    <h4>С помощью рекурсии организовать функцию возведения числа в степень. Формат: function power(val, pow), где val – заданное число, pow – степень.</h4>
+    <script src="8.js"></script>
+
+</body>
+</html>
