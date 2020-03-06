@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div>
+    <h4>1. Создать простой калькулятор: 10 кнопок с цифрами (0-9), знаки "+", "-", "*", "/", "=", "С" (очистка поля). С помощью кнопок вводим первое число, нажимаем знак операции, второе число, нажимаем равно и получаем на экране результат. По нажатию на "С" поле очищается.</h4>
+    <h4>2. Добавить в калькулятор возможность вводить цифры и знаки арифметических операций с клавиатуры ("+", "-", "*", "/", "=",). Добавить кнопку "<-" (backspace"), которая удаляет последнюю введенную цифру (если пользователь ошибся и решил исправить число).</h4>
+    <script src="1.js"></script>
+    <script src="2.js"></script>
+    <style type="text/css">
+
+    </style>
+
+    <div id='calc-contain'>
+
+          <form name="calculator">
+
+            <input type="text" name="answer" />
+            <br>
+
+            <input type="button" value="1" onclick="pressNumber(value, calculator.answer)" />
+            <input type="button" value="2" onclick="pressNumber(value, calculator.answer)" />
+            <input type="button" value="3" onclick="pressNumber(value, calculator.answer)" />
+            <input type="button" value="+" onclick="pressNumber(value, calculator.answer)" />
+            <br/>
+
+            <input type="button" value="4" onclick="pressNumber(value, calculator.answer)" />
+            <input type="button" value="5" onclick="pressNumber(value, calculator.answer)" />
+            <input type="button" value="6" onclick="pressNumber(value, calculator.answer)" />
+            <input type="button" value="-" onclick="pressNumber(value, calculator.answer)"/>
+            </br>
+
+            <input type="button" value="7" onclick="pressNumber(value, calculator.answer)" />
+            <input type="button" value="8" onclick="pressNumber(value, calculator.answer)" />
+            <input type="button" value="9" onclick="pressNumber(value, calculator.answer)"/>
+            <input type="button" value="x" onclick="pressNumber(value, calculator.answer)" />
+            </br>
+
+            <input type="button" value="c" onclick="pressClS(calculator.answer)"/>
+            <input type="button" value="0" onclick="pressNumber(value, calculator.answer)" />
+            <input type="button" value="=" onclick="pressEval(calculator.answer)" />
+            <input type="button" value="/" onclick="pressNumber(value, calculator.answer)" />
+            </br>
+            <input type="button" value="<-" onclick="pressBackspace(calculator.answer)" />
+          </form>
+        </div>
+                <h4>3. Добавить выпадающий список с возможностью выбора другого цвета фона калюкулятора (3-5 вариантов) и второй список для изменения цвета шрифта. Если цвет фона и шрифта совпадает, то не менять один из них (выводить предупреждение при этом).</h4>
+        <script src="3.js"></script>
+    <form>
+        <select name="color" onchange="selectColor('#calc-contain', form.elements[0].options[selectedIndex].value, form.elements[1].value, form.elements[0])">
+            <option>lightGray</option>
+            <option>black</option>
+            <option>white</option>
+            <option>red</option>
+            <option>orange</option>
+        </select>
+        <select name="Text color" onchange="selectColorText('input[type=button]', form.elements[1].options[selectedIndex].value, form.elements[0].value, form.elements[1])">
+            <option>black</option>
+            <option>lightGray</option>
+            <option>white</option>
+            <option>red</option>
+            <option>orange</option>
+        </select>
+    </form>
+</div>
+    <h4>4. Реализовать видео проигрыватель, как это было сделано на занятии.</h4>
+    <title>Video player</title>
+
+
+    <div>
+        Текущее время: <span class="currentTime">0</span>
+    </div>
+    <div class="player">
+        <video>
+            <source src="Cute%20Cat%20-%203092.mp4">
+        </video>
+
+        <input type="range" class="volume" value="0" step="0.01">
+    </div>
+    <i class="fas fa-play"></i>
+    <i class="fas fa-pause"></i>
+    <input type="range" class="timing" value="0" step="0.01">
+<script src="4.js"></script>
+<div>
+
+
+</div>
+</body>
+</html>
